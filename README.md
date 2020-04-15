@@ -1,5 +1,10 @@
 # Caravan-Insurance-Customer-Identification
 
+caravan.csv -Dataset
+
+caravan.ipynb - Pyhton code (Jupyter notebook)
+
+
 Problem Statement: - 
 Need to classify the potential customers in buying Caravan insurance. Target variable Caravan(Binary Classification).
 Kaggle dataset :- https://www.kaggle.com/kathakaliseth/caravan-insurance-customer-identification/notebook
