@@ -1,41 +1,67 @@
-# Caravan-Insurance-Customer-Identification
+# Caravan Insurance Customer Identification
 
-caravan.csv -Dataset
+This project focuses on classifying potential customers for buying Caravan insurance. The target variable is `Caravan` (Binary Classification).
 
-caravan.ipynb - Pyhton code (Jupyter notebook)
+## Files
 
+- **Dataset:**
+  - `caravan.csv`
 
-Problem Statement: - 
-Need to classify the potential customers in buying Caravan insurance. Target variable Caravan(Binary Classification).
-Kaggle dataset :- https://www.kaggle.com/kathakaliseth/caravan-insurance-customer-identification/notebook
+- **Python Code:**
+  - Jupyter notebook: `caravan.ipynb`
 
-Data Analysis: -
-The dataset contains 87 variables and 9823 observations. Please refer the Kaggle link for variable descriptions.
-The dataset contains both train and test observations. Hence the dataset was divided into two data frames Train and Test using the ORIGIN variable. Then the variable was dropped.
-Train’s shape (5822, 86)
-Test’s shape (4000, 86)
-•	Down sampling
-Train test contains the imbalanced classification so we are going for down sampling.  The categories were down sampled from
-0 -3762     1 – 238 (Value counts)
+## Problem Statement
 
-To
-0 - 400   1- 348 (Value counts)
+The goal is to classify potential customers into two categories based on their likelihood to purchase Caravan insurance. The target variable is binary (0 or 1).
 
-•	No Missing Values
+## Kaggle Dataset
 
-•	Feature Selection
+The dataset contains 87 variables and 9823 observations. Refer to the Kaggle link for variable descriptions: [Caravan Insurance Customer Identification](https://www.kaggle.com/kathakaliseth/caravan-insurance-customer-identification/notebook).
 
-Applied chi-sq-Test for Categorical variables with p-value threshold limit 0.02 and neglected the insignificant variables. The dimensions was reduced from 87 to 26.
+## Data Analysis
 
-All were categorical variables with pre set type codes.
+- **Data Splitting:**
+  - The dataset was divided into two data frames, Train and Test, using the `ORIGIN` variable. The variable was then dropped.
+  - Train Shape: (5822, 86)
+  - Test Shape: (4000, 86)
 
-•	No outliers were carried out since all are categorical variables.
+- **Down Sampling:**
+  - Due to imbalanced classification, down sampling was applied.
+  - Original Value Counts: 0 - 3762, 1 - 238
+  - Downsampled Value Counts: 0 - 400, 1 - 348
 
-•	Model Development
+- **No Missing Values**
+- **Feature Selection:**
+  - Applied chi-sq-Test for Categorical variables with a p-value threshold limit of 0.02.
+  - Reduced dimensions from 87 to 26.
 
-Initially the model came out with 75% accuracy rates. When the p value of the chi-sq test was reduced to 0.02 the dimensions were further reduced and the model came up with 100% accuracy rates with no FP and FN.
+- **Model Development:**
+  - Initially, the model achieved 75% accuracy.
+  - After reducing the p-value of the chi-sq test to 0.02, the model achieved 100% accuracy with no False Positives (FP) and False Negatives (FN).
 
-Accuracy: 1.0
-Confusion matrix: [[3762    0]
-                                  [   0  238]]
+  Accuracy: 1.0
+  Confusion Matrix: 
+  ```
+  [[3762 0] 
+  [0 238]]
+  ```
 
+## Usage
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Caravan-Insurance-Customer-Identification
+   ```
+
+3. Explore the dataset and Jupyter notebook for detailed analysis and code.
+
+Feel free to refer to the `caravan.ipynb` for an in-depth explanation of the project.
+
+---
+
+**Note:** Adjust file paths and comments as needed for your project structure.
